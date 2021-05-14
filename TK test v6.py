@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 
+
 top = Tk()
 SongList = []
 MyRolls = []
@@ -33,6 +34,9 @@ def MainMenu():
     B3Main = Button(text = "week 3")
     B3Main.grid(column = 0, row = 4)
 
+    Bruh = Button(text = "hell", command = HELL)
+    Bruh.grid(column = 2, row = 6)
+    
 def week1():
     def AddSong():
         SongList.append(E1.get())
@@ -57,6 +61,8 @@ def week1():
     BC = Button(text="Main menu",bg = "#8a7e42", command = MainMenu)
     BC.grid(column = 0, row = 4)
 
+    
+    
 def week2():
     def RollDice():
         RollTimes = E1W2.get()
@@ -95,6 +101,61 @@ def week2():
 
     B1W2 = Button(text="roll", bg = "blue", command = RollDice)
     B1W2.grid(column = 1, row = 4)
+
+
+def HELL():
+    ClearWindow()
+    Tr = Button(wraplength=100, justify=LEFT,text = ":trollface::trollface: :trollface::trollface::trollface: :trollface::trollface::trollface:::trollface::trollface:::trollface::trollface:: :trollface:  :trollface: :trollface::trollface::trollface::trollface:::trollface::trollface:: :trollface::trollface::trollface:: :trollface::trollface::trollface:::trollface::trollface:::trollface::trollface:: :trollface: :trollface: :trollface:  :trollface:  :trollface:  :trollface:  :trollface: :trollface: :trollface: :trollface:  :trollface: :trollface:  :trollface:")
+    Tr.grid(column = 0, row = 1)
+
+    T2 = Button(text = "leave, forever", command = Trolled)
+    T2.grid(column = 1, row = 1)
+
+
+def Trolled():
+    ClearWindow()
+    
+    LaMain = Label(top, text = "No Escape")
+    LaMain.grid(column = 0, row = 1)
+    
+    Ba1Main = Button(text = "week 1", bg = "#b00b69", command = HELL2)
+    Ba1Main.grid(column = 0, row = 2)
+    
+    Ba2Main = Button(text = "Week 2", command = HELL2)
+    Ba2Main.grid(column = 0, row = 3)
+    
+    Ba3Main = Button(text = "week 3", command = HELL2)
+    Ba3Main.grid(column = 0, row = 4)
+
+    Bruh = Button(text = "Return", command = HELL2)
+    Bruh.grid(column = 2, row = 6)
+
+def HELL2():
+    ClearWindow()
+    Tr = Button(wraplength=100, justify=LEFT,text = ":trollface::trollface: :trollface::trollface::trollface: :trollface::trollface::trollface:::trollface::trollface:::trollface::trollface:: :trollface:  :trollface: :trollface::trollface::trollface::trollface:::trollface::trollface:: :trollface::trollface::trollface:: :trollface::trollface::trollface:::trollface::trollface:::trollface::trollface:: :trollface: :trollface: :trollface:  :trollface:  :trollface:  :trollface:  :trollface: :trollface: :trollface: :trollface:  :trollface: :trollface:  :trollface:")
+    Tr.grid(column = 0, row = 1)
+
+    T2 = Button(text = "leave, for real this time",  command = TROLL2)
+    T2.grid(column = 1, row = 1)
+
+def TROLL2():
+    ClearWindow()
+    
+    LaMain = Label(top, text = "There is no return")
+    LaMain.grid(column = 0, row = 1)
+    
+    Ba1Main = Button(text = "Give up", bg = 'red', command = TROLL2)
+    Ba1Main.grid(column = 0, row = 2)
+    
+    Ba2Main = Button(text = "Give up", bg = 'red', command = TROLL2)
+    Ba2Main.grid(column = 0, row = 3)
+    
+    Ba3Main = Button(text = "Give up", bg = 'red', command = TROLL2)
+    Ba3Main.grid(column = 0, row = 4)
+
+
+
+
 
 if __name__ == "__main__":
     MainMenu()
